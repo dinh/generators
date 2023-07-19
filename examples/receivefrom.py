@@ -11,8 +11,7 @@ def receivefrom(addr):
     s.bind(addr)
     s.listen(5)
     c, a = s.accept()
-    for item in gen_unpickle(c.makefile('rb')):
-        yield item
+    yield from gen_unpickle(c.makefile('rb'))
     c.close()
 
 # Example use:

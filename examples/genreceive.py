@@ -9,8 +9,7 @@ def receive_connections(addr):
     s.bind(addr)
     s.listen(5)
     while True:
-        client = s.accept()
-        yield client
+        yield s.accept()
 
 # Example use
 

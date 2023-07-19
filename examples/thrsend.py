@@ -15,8 +15,7 @@ class ConsumerThread(threading.Thread):
 
     def generate(self):
         while True:
-            item = self.in_queue.get()
-            yield item
+            yield self.in_queue.get()
 
     def run(self):
         self.target(self.generate())

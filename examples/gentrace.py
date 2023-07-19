@@ -15,8 +15,5 @@ if __name__ == '__main__':
     log =  trace(apache_log(lines))
     r404 = (r for r in log if r['status'] == 404)
 
-    for r in r404:
-        pass
-
 
                 
