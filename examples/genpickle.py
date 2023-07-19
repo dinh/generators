@@ -11,8 +11,7 @@ def gen_pickle(source):
 def gen_unpickle(infile):
     while True:
         try:
-            item = pickle.load(infile)
-            yield item
+            yield pickle.load(infile)
         except EOFError:
             return
 

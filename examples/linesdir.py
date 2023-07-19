@@ -9,8 +9,7 @@ from genopen import *
 def lines_from_dir(filepat, dirname):
     names = Path(dirname).rglob(filepat)
     files = gen_open(names)
-    lines = gen_cat(files)
-    return lines
+    return gen_cat(files)
 
 # Example use
 
